@@ -202,7 +202,7 @@ a {
   .product-section .product-item {
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     position: relative;
     padding-bottom: 50px;
     cursor: pointer; }

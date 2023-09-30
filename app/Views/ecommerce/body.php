@@ -70,19 +70,22 @@
             <!-- End Column 1 -->
 
             <!-- Start Column 2 -->
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <?php foreach ($items as $i): ?>
-                <a class="product-item" href="cart.html">
-                    <img src="<?= base_url(); ?>ecommerce/images/product-1.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title"><?= $i['name']; ?></h3>
-                    <strong class="product-price"><?= $i['price']; ?></strong>
+                <div class="row-12 row-md-4 col-lg-3 mb-5 mb-md-0">
+                            <?php foreach ($items as $i): ?>
+                                <div class="product_box">
+                                <a class="product-item" href="cart.html">
+                                    <img src="<?= base_url(); ?>ecommerce/images/product-1.png" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title"><?= $i['name']; ?></h3>
+                                    <strong class="product-price"><?= $i['price']; ?></strong>
 
-                    <span class="icon-cross">
-                        <img src="<?= base_url(); ?>ecommerce/images/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-                <?php endforeach; ?>
-            </div> 
+                                    <span class="icon-cross">
+                                        <img src="<?= base_url(); ?>ecommerce/images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                                </div>
+                            <?php endforeach; ?>
+                </div>
+          
             <!-- End Column 2 -->
 
 
