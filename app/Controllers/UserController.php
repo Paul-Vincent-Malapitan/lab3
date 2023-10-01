@@ -27,7 +27,7 @@ class UserController extends BaseController
     return redirect() -> to('/signin');
     }else{
     $data['validation'] = $this->validator;
-    echo view('signup', $data);
+    echo view('signin', $data);
     }
    }
 

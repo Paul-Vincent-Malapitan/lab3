@@ -33,7 +33,7 @@
                             <button type="submit" class="btn btn-dark">SignUp</button>
                         </div>
 
-                </form>
+                    </form>
             </div>
         </div>
     </div>

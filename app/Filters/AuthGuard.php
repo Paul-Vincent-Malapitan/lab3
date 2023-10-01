@@ -8,6 +8,14 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class AuthGuard implements FilterInterface
 {
+    public function filter()
+    {
+    if (!session()->get('isLoggedIn'))
+        {
+            return redirect()->to ('/signin');
+        }
+}
+
     /**
      * Do whatever processing this filter needs to do.
      * By default it should not return anything during
