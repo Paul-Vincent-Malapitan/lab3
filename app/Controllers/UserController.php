@@ -27,7 +27,7 @@ class UserController extends BaseController
     return redirect() -> to('/signin');
     }else{
     $data['validation'] = $this->validator;
-    echo view('signin', $data);
+    echo view('register', $data);
     }
    }
 
@@ -40,11 +40,11 @@ class UserController extends BaseController
    public function LoginAuth()
    {
     $session = session();
-    $userModeI = new UserModel();
+    $userModel = new UserModel();
     $username = $this->request->getVar('username');
     $password = $this->request->getVar('password');
 
-    $data = $userModel->where(username, $username)->first();
+    $data = $userModel->where('username', $username)->first();
 
     if($data){
         $pass = $data['password'];
@@ -52,7 +52,7 @@ class UserController extends BaseController
         if($authenticatePassword){
         $ses_data = [
         'id' => $data['id'],
-        username=> $data['username'],
+        'username'=> $data['username'],
         'isLoggedln' => TRUE
         ];
 

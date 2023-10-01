@@ -7,7 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/home', 'MainController::home');
-$routes->post('/signin', 'UserController::LoginAuth ');
-$routes->post('/register', 'UserController::register');
+$routes->get('/signin', 'UserController::Login');
+$routes->get('/LogAuth', 'UserController::LoginAuth');
+$routes->get('/register', 'UserController::register');
 ['filter'=> 'authGuard'];
 

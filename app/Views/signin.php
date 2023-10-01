@@ -13,7 +13,7 @@
                 <h2>Log In</h2>
                 <?php if(session()->getFlashdata('msg')): ?>
                     <div class="alert alert-warning">
-                        <?= getFlashdata('msg') ?>
+                        <?=session()-> getFlashdata('msg') ?>
                     </div>
                     <?php endif; ?>
                     <form action="<?php echo base_url(); ?>/UserController/LoginAuth" method="post">
